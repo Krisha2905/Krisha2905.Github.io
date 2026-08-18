@@ -11,19 +11,19 @@
 <style>
  :root{
     --bg: #000000;
-    --bg-alt: #0A0A0A;
+    --bg-alt: #080808;
 
-    --header: #6C4DFF;
-    --header-dark: #4B32B8;
+    /* Glass White Header */
+    --header: rgba(255,255,255,0.10);
+    --header-dark: rgba(255,255,255,0.06);
 
     --cyan: #00E5FF;
     --cyan-soft: #53E2E7;
-
     --purple: #AA6BE4;
     --pink: #FF008C;
 
     --card: rgba(255,255,255,.06);
-    --card-border: rgba(255,255,255,.12);
+    --card-border: rgba(255,255,255,.15);
 
     --text: #F2F2FA;
     --text-muted: #B8B8CC;
@@ -31,6 +31,8 @@
     --radius: 18px;
     --header-h: 72px;
 }
+
+  
 
   *,*::before,*::after{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; scroll-padding-top: calc(var(--header-h) + 14px); }
@@ -66,8 +68,18 @@
     height:var(--header-h);
     display:flex; align-items:center; justify-content:space-between;
     padding:0 clamp(16px, 4vw, 48px);
-    background:var(--header);
-    box-shadow:0 8px 25px rgba(108, 77, 255, 0.45);
+      background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+
+    /* Attractive soft shadow/glow */
+    box-shadow:
+        0 8px 30px rgba(255,255,255,0.12),
+        0 4px 15px rgba(0,0,0,0.45);
+
+    color: #ffffff;
   }
   .logo{
     font-family:'Poppins', sans-serif;
