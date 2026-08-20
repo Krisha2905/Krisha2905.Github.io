@@ -9,11 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
-:root{
-    --bg: #06060a;
-    --bg-alt: black;
-    --header: white;
-    --header-dark: lightgrey;
+ :root{
+    --bg: #000021;
+    --bg-alt: #060620;
+    --header: #f5a208;
+    --header-dark: #d98d00;
     --cyan: #00e5ff;
     --cyan-soft: #53e2e7;
     --purple: #aa6be4;
@@ -56,28 +56,14 @@
   .page{ position:relative; z-index:1; }
 
   /* ===== Header / Nav ===== */
-header{
+ header{
     position:fixed; top:0; left:0; right:0; z-index:1000;
     height:var(--header-h);
     display:flex; align-items:center; justify-content:space-between;
     padding:0 clamp(16px, 4vw, 48px);
-    background:rgba(5,8,24,.55);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(255,255,255,.08);
-    box-shadow:0 4px 20px rgba(0,0,0,.25);
-    transition:background .3s ease;
-  }
-  header.scrolled{ background:rgba(5,8,24,.8); }
-
-
-    /* Attractive soft shadow/glow */
-    box-shadow:
-        0 8px 30px rgba(255,255,255,0.12),
-        0 4px 15px rgba(0,0,0,0.45);
-
-    color: #ffffff;
-  }
+    background:var(--header);
+    box-shadow:0 2px 10px rgba(0,0,0,.25);
+  
   .logo{
     font-family:'Poppins', sans-serif;
     font-weight:700; font-size:1.15rem;
